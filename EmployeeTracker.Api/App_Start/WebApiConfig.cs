@@ -39,7 +39,7 @@ namespace EmployeeTracker.Api
             // Register Dependencies via Autofac
             //
             var builder = new ContainerBuilder();
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterModule(new StandardModule());
 
             var container = builder.Build();

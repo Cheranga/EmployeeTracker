@@ -15,7 +15,7 @@ namespace EmployeeTracker.Api
             base.Load(builder);
 
             var con = ConfigurationManager.ConnectionStrings["DbConnection"];
-            builder.RegisterType<Connection>().As<IConnection>().WithParameter("settings", con).InstancePerRequest();
+            builder.RegisterType<Connection>().As<IConnection>().WithParameter("connectionStringSettings", con).InstancePerRequest();
 
             builder.RegisterType<Repository>().As<IRepository>().InstancePerRequest();
 

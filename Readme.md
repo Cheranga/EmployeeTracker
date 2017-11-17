@@ -1,5 +1,6 @@
 TODO
 1.	Add logging
+2.	Completely decouple DAL from the WebApi
 
 Nuget packages
 1.	Autofac
