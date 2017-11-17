@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -41,11 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chart\ChartData.cs" />
+    <Compile Include="Chart\IChartData.cs" />
     <Compile Include="Common\Connection.cs" />
     <Compile Include="Common\IConnection.cs" />
     <Compile Include="Common\IRepository.cs" />
     <Compile Include="Common\Repository.cs" />
+    <Compile Include="Dashboard\Dashboard.cs" />
+    <Compile Include="Dashboard\DashboardService.cs" />
+    <Compile Include="Dashboard\IDashboard.cs" />
+    <Compile Include="Dashboard\IDashboardService.cs" />
+    <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\EmployeeService.cs" />
+    <Compile Include="Employees\IEmployee.cs" />
+    <Compile Include="Employees\IEmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
